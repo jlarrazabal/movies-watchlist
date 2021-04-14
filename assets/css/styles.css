@@ -1,0 +1,100 @@
+/* Variables */
+:root {
+  --color1: #eeebdd;
+  --color2: #ce1212;
+  --color3: #810000;
+  --color4: #1b1717;
+}
+
+/* General Selectors */
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: solid 1px var(--color2);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--color1);
+}
+
+.flex-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+  background-color: var(--color4);
+}
+
+.header-title {
+  color: var(--color1);
+}
+
+.header-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-form-item {
+  background-color: var(--color1);
+  border: solid 1px var(--color2);
+  margin: 0.25rem;
+}
+
+.movie-list-container {
+  width: 20%;
+  height: 100vh;
+  margin-left: 1rem;
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+.movie-list-item {
+  border: solid 1px var(--color1);
+  text-align: center;
+  padding: 0.25rem;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-list-item:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
+.my-queue-title {
+  margin: 0;
+  padding: 0.25rem;
+  padding-top: 1rem;
+  color: var(--color2);
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.delete-btn:hover {
+  background: var(--color3);
+  color: var(--color1);
+}

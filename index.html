@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies Watchlist</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar flex-header" role="navigation" aria-label="main navigation">
+    <h1 class="header-title">Personal Cinema Playlist</h1>
+    <form id="search-form" class="header-form" action="index.html" method="post">
+      <input id="movie-search" class="input header-form-item" type="text" name="search" value="" placeholder="Type movie name!">
+      <button id="search-btn" class="button header-form-item" type="button" name="button">🔍</button>
+    </form>
+  </nav>
+  <aside class="accordion movie-list-container" id="accordionExample">
+    <h2 class="my-queue-title">My Queue</h2>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Genre #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Genre #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Genre #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul>
+            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
