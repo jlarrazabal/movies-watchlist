@@ -98,3 +98,7 @@ body {
   background: var(--color3);
   color: var(--color1);
 }
+
+.error-modal{
+  display: none;
+}
