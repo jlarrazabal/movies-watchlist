@@ -103,23 +103,31 @@ body {
   display: flex;
   flex-direction: row;
   justify-items: center;
+  flex-wrap: wrap;
+}
+
+.movieDetails {
+  display:inline-block;
   height: 100vh;
+
+}
+
+.displayTitle {
+  display: inline-block;
   width: 100%;
 }
 
 .movieInfo {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+  flex-direction: row;
+  flex-wrap:wrap;
   align-items: center;
-  width: 100%;
+  justify-content: center;
 }
 
-#lemusDiv {
-  
-  display: inline;
-  height: auto;
-  width: auto;
+.reviewForm {
+  display: inline-block;
+  height: 100vh;
 }
 
 #reviewHeader {
@@ -147,4 +155,18 @@ body {
   border-top: solid black 2px;
   padding-top: 5px;
   margin-bottom: 5px;
+}
+
+.footer {
+  font-size: 1rem;
+  background-color: var(--color4);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  color: var(--color1);
+}
+
+.footer p,a {
+  /* color: var(--color1); */
 }
