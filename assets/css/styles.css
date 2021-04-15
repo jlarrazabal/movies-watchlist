@@ -98,3 +98,20 @@ body {
   background: var(--color3);
   color: var(--color1);
 }
+.card {
+  height: 100vh;
+  width:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  color: #810000;
+
+}
+.card-image {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  color: #810000;
+}
