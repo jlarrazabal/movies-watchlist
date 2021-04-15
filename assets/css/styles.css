@@ -98,3 +98,48 @@ body {
   background: var(--color3);
   color: var(--color1);
 }
+
+.movieDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+#lemusDiv {
+  border: solid black 2px;
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+#reviewHeader {
+  border-bottom: solid black 2px;
+}
+
+#reviwBox {
+  border-bottom: solid black 2px;
+}
+
+#reviewInput {
+  height: 300px;
+  width: 400px;
+  margin: 25px;
+  text-align: left;
+  float: inline-start;
+}
+
+#starRating {
+  border-top: solid black 2px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}

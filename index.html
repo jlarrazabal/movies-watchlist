@@ -20,69 +20,100 @@
       <button id="search-btn" class="button header-form-item" type="button" name="button">🔍</button>
     </form>
   </nav>
-  <aside class="accordion movie-list-container" id="accordionExample">
-    <h2 class="my-queue-title">My Queue</h2>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Genre #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <ul>
-            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
-          </ul>
+  <main class="movieDisplay">
+    <aside class="accordion movie-list-container" id="accordionExample">
+      <h2 class="my-queue-title">My Queue</h2>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Genre #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Genre #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <ul>
-            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
-          </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Genre #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Genre #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <ul>
-            <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-            <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
-          </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Genre #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </aside>
-  <main>
-    <h1 id="movieName"></h1>
+    </aside>
 
-    <div id="elcinDiv">
-      
-    </div>
-
-    <div id="lemusDiv">
-
-    </div>
+    <section class="movieInfo">
+      <h1 id="movieName">Movie Name</h1>
     
+      <div id="elcinDiv">
+        
+      </div>
+  
+      <div id="lemusDiv">
+        <h3 id="reviewHeader">My Review</h3>
+        <form id="reviewBox">
+          <textarea id="reviewInput"></textarea>
+        </form>
+        <div id="starRating">
+          <span>My Rating:   </span>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio3">3</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio4">4</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio5">5</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+
 
   <footer id="howellDiv">
     
