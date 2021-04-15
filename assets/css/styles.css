@@ -27,8 +27,13 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--color2);
+}
+
 body {
   background: var(--color1);
+  height: 100vh;
 }
 
 .flex-header {
@@ -55,9 +60,13 @@ body {
   margin: 0.25rem;
 }
 
+.header-btn:hover {
+  background-color: var(--color2);
+}
+
 .movie-list-container {
   width: 20%;
-  height: 100vh;
+  /* height: 100vh; */
   margin-left: 1rem;
 }
 
@@ -99,6 +108,129 @@ body {
   color: var(--color1);
 }
 
-.error-modal{
+.movieDisplay {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.box {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  background-color: var(--color1);
+  padding: 0;
+  box-shadow: none;
+}
+
+.displayTitle {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0.25rem;
+  padding-top: 1rem;
+  color: var(--color2);
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.movie-details-container {
+  display:inline-block;
+  border: solid 1px var(--color2);
+  background-color: var(--color1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.review-container {
+  border: solid 1px var(--color2);
+  background-color: var(--color1);
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.review-title {
+  color: var(--color2);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.review-form {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border: 0;
+}
+
+.review-textarea {
+  margin: auto;
+  text-align: left;
+  border: solid 1px var(--color2);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.rating {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.review-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.review-btn {
+  background-color: var(--color1);
+  border: solid 1px var(--color2);
+  margin: 0.25rem;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.review-btn:hover {
+  background: var(--color3);
+  color: var(--color1);
+}
+
+.footer {
+  font-size: 1rem;
+  background-color: var(--color4);
+  width: 100%;
+  height: 4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer p,a {
+  color: var(--color1);
+  margin-bottom: 0;
+}
+
+.error-modal {
   display: none;
 }
