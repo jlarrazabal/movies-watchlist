@@ -60,3 +60,7 @@ $("#search-form").on("submit", function(event) {
   getMoviePoster(movie);
   $("#movie-search").val("");
 });
+
+
+
+//Lemus work
