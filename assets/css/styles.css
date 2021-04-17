@@ -212,6 +212,14 @@ body {
   color: var(--color1);
 }
 
+.share-btn-main {
+display: flex;
+}
+
+.share-btn-fb {
+flex-grow: 1;
+}
+
 .footer {
   font-size: 1rem;
   background-color: var(--color4);

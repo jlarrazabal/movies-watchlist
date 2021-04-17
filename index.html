@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="zdBuQDTT"></script>
   <nav class="navbar flex-header" role="navigation" aria-label="main navigation">
     <h1 class="header-title">Personal Cinema Playlist</h1>
     <form id="search-form" class="header-form" action="index.html" method="post">
@@ -126,8 +128,7 @@
             </div>
             <div class="review-btn-container">
               <button id="save-btn" class="button is-large review-btn" type="button" name="button">Save</button>
-              <button id="share-btn" class="button is-large review-btn" type="button" name="button">Share</button>
-              <button id="delete-btn" class="button is-large review-btn" type="button" name="button">Delete</button>
+              <button id="share-btn" class="button is-large review-btn share-btn-main" type="button" name="button">Share</button>
             </div>
           </form>
         </div>
