@@ -91,3 +91,48 @@ $("#search-form").on("submit", function(event) {
 
 
 //Lemus work
+// trying the local save function
+
+//function to save information on left side
+
+function savedMovie() {
+    var film = localStorage.getItem("movieInfo");
+
+}
+
+$("#save-btn").on('click', function(event){
+    var movieListItem = document.querySelector("#movieInfo").value;
+    event.preventDefault();
+    localStorage.setItem("movieInfo", movieListItem);
+    savedMovie();
+  
+//     var email = document.querySelector("#email").value;
+//     var password = document.querySelector("#password").value;
+  
+//     if (email === "") {
+//       displayMessage("error", "Email cannot be blank");
+//     } else if (password === "") {
+//       displayMessage("error", "Password cannot be blank");
+//     } else {
+//       displayMessage("success", "Registered successfully");
+  
+//       localStorage.setItem("email", email);
+//       localStorage.setItem("password", password);
+//       renderLastRegistered();
+//     }
+//   });
+
+
+// $(".movieInfo").val(localStorage.movieInfo)
+
+// $("#save-btn").on('click', function(){
+//     // localStorage.movieInfo = $(".movieInfo").val()
+//     saveInfo();
+// });
+
+
+// var saveInfo = function() {
+//     var movieList=$("#movieList")
+//     var movieItem=$("<li>");
+//     movieItem.text(data.Title);
+//     movieList.append(movieList);
