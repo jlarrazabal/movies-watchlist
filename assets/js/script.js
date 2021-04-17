@@ -88,3 +88,14 @@ $("#search-form").on("submit", function(event) {
   getMovies(movie);
   $("#movie-search").val("");
 });
+
+
+const renderMovieFromList = function(id) {
+	getMovieDetails(id);
+
+}
+$(".movie-list-item").on("click",function (event){
+	event.preventDefault();
+	let imdbID = $(event.target).attr("data-id");
+	renderMovieFromList(imdbID);
+});
