@@ -212,7 +212,7 @@ body {
   color: var(--color1);
 }
 
-.footer {
+ .footer {
   font-size: 1rem;
   background-color: var(--color4);
   width: 100%;
@@ -222,12 +222,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position:fixed;
+  /* position:fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
 
-}
+} 
 
 .footer p,a {
   color: var(--color1);
@@ -278,4 +278,20 @@ body {
 .modal-movie-list-item:hover {
   color: var(--color1);
   background-color: var(--color3);
+}
+.genre-option {
+  background-color: var(--color1);
+  border: solid 1px var(--color2);
+  margin: 0.25rem;
+  font-weight: 400;
+  flex-grow: 1;
+  border-radius: 0.5rem;
+}
+.genre-option:hover {
+  border: solid 1px var(--color2);
+  /* background: var(--color1);
+  color: var(--color4); */
+  background-color: var(--color2);
+  color: var(--color1);
+  
 }
