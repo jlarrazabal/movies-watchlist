@@ -105,6 +105,7 @@ $("#save-btn").on('click', function(event){
     event.preventDefault();
     localStorage.setItem("movieInfo", movieListItem);
     savedMovie();
+}
   
 //     var email = document.querySelector("#email").value;
 //     var password = document.querySelector("#password").value;
@@ -129,10 +130,3 @@ $("#save-btn").on('click', function(event){
 //     // localStorage.movieInfo = $(".movieInfo").val()
 //     saveInfo();
 // });
-
-
-// var saveInfo = function() {
-//     var movieList=$("#movieList")
-//     var movieItem=$("<li>");
-//     movieItem.text(data.Title);
-//     movieList.append(movieList);
