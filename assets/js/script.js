@@ -166,3 +166,12 @@ $("#reviewBox").delegate("#save-btn", "click", function(event) {
     // or $("#movieID").setAttribute("class", "data-id");
 
 });
+const renderMovieFromList = function(id) {
+	getMovieDetails(id);
+
+}
+$(".movie-list-item").on("click",function (event){
+	event.preventDefault();
+	let imdbID = $(event.target).attr("data-id");
+	renderMovieFromList(imdbID);
+});
