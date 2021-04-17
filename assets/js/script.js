@@ -63,6 +63,7 @@ var getMovieDetails = function(id) {
 }
 
 var renderMovieInfor = function(data) {
+  $("#movieName").text(data.Title);
   $("#movie-details-poster").attr("src", data.Poster);
   $("#movieYear").text(data.Year);
   $("#movieLength").text(data.Runtime);
