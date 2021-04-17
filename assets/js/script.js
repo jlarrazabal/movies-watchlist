@@ -71,6 +71,7 @@ var renderMovieInfor = function(data) {
   $("#movieDirector").text(data.Director);
   $("#movieProducer").text(data.Production);
   $("#movieRating").text(data.imdbRating + "/10");
+  $("#movieID").text(data.imdbID);
 }
 
 $("#search-form").delegate("#search-btn", "click", function(event) {
