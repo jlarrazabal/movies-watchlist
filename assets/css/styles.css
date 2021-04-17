@@ -153,6 +153,7 @@ body {
   background-color: var(--color1);
   padding: 0.5rem;
   border-radius: 0.5rem;
+  flex-grow: 1;
 }
 
 .review-container {
@@ -160,6 +161,7 @@ body {
   background-color: var(--color1);
   border-radius: 0.5rem;
   margin-left: 0.5rem;
+  flex-grow: 1;
 }
 
 .review-title {
