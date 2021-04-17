@@ -80,7 +80,7 @@
         </h2>
         <div id="collapseFantasy" class="accordion-collapse collapse" aria-labelledby="genre-fantasy" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
+            <ul id="movieList">
               <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
               <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
               <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
@@ -154,7 +154,7 @@
       </div>
     </aside>
 
-    <section class="movieInfo">
+    <section class="movieInfo" id="movieInfo">
       <h1 class="displayTitle" id="movieName">Movie Name</h1>
       <div class="box">
         <div class="movie-details-container" id="elcinDiv">
@@ -180,25 +180,25 @@
             <textarea id="reviewInput" class="review-textarea" placeholder="Type your review here!" cols=100" rows="10"></textarea>
             <div class="card-content rating" id="starRating">
               <p><span class="content">My Rating: </span>
-                <span class="control">
+                <span class="control" id="control">
                   <label class="radio">
-                    <input type="radio" name="answer">
+                    <input type="radio" name="answer" value="1">
                     1
                   </label>
                   <label class="radio">
-                    <input type="radio" name="answer">
+                    <input type="radio" name="answer" value="2">
                     2
                   </label>
                   <label class="radio">
-                    <input type="radio" name="answer">
+                    <input type="radio" name="answer" value="3">
                     3
                   </label>
                   <label class="radio">
-                    <input type="radio" name="answer">
+                    <input type="radio" name="answer" value="4">
                     4
                   </label>
                   <label class="radio">
-                    <input type="radio" name="answer">
+                    <input type="radio" name="answer" value="5">
                     5
                   </label>
                 </span>

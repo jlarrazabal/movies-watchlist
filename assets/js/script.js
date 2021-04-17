@@ -90,6 +90,82 @@ $("#search-form").on("submit", function(event) {
 });
 
 
+
+//Lemus work
+
+// Movie genre arrays
+var actionMovie = [];
+
+var romanceMovie = [];
+
+var thrillerMovie = [];
+
+var comedyMovie = [];
+
+var dramaMovie = [];
+
+var horrorMovie = [];
+
+//function for storing information
+
+$("#reviewBox").delegate("#save-btn", "click", function(event) {
+    event.preventDefault();
+
+    let rating = $('input[name="answer"]:checked').val();
+    console.log(rating);
+
+    // let genre= //should be from the dropdown
+    let movName = $("#movieName").val();
+    let imdbID = $("#movieID").val();
+
+    var movieInformation = {
+        movieTitle: movName,
+        movieReview: reviewInfo,
+        movieImdbID: imdbID,
+        // genre: genre, //should be from the dropdown
+        movieRating: rating
+    }
+
+    switch (genre) {
+        case "action":
+            actionMovie.push(movieInformation);
+            //create element
+            //adding movie to the menue
+            //append element to the queue
+            break;
+        case "romance":
+            romanceMovie.push(movieInformation);
+            //adding movie to the menue
+            break;
+        case "thriller":
+            thrillerMovie.push(movieInformation);
+            //adding movie to the menue
+            break;
+        case "comedy":
+            comedyMovie.push(movieInformation);
+            break;
+        case "drama":
+            dramaMovie.push(movieInformation);
+            break; 
+        case "horror":
+            horrorMovie.push(movieInformation);
+
+            //adding movie to the menue
+    }
+
+
+
+    // localStorage.setItem("actionGenre", actionMovie);
+    // localStorage.setItem("romanceGenre", romanceMovie);
+    // localStorage.setItem("thrillerGenre", thrillerMovie);
+    // localStorage.setItem("comedyGenre", comedyMovie);
+    // localStorage.setItem("dramaGenre", dramaMovie);
+    // localStorage.setItem("horrorGenre", horrorMovie);
+
+    document.getElementById("movieID").setAttribute("class", "data-id");
+    // or $("#movieID").setAttribute("class", "data-id");
+
+});
 const renderMovieFromList = function(id) {
 	getMovieDetails(id);
 
