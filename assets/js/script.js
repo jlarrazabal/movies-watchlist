@@ -55,11 +55,22 @@ var getMovieDetails = function(id) {
     }
   }).then(function(data) {
     console.log(data);
-    //Call function to populate the fields of the #movie-details-content div and the poster (#movie-details-poster)
+    renderMovieInfor(data);
   });
   $("#movies-modal").dialog("close");
   $("#movie-modal-content").empty();
   url = "";
+}
+
+var renderMovieInfor = function(data) {
+  $("#movie-details-poster").attr("src", data.Poster);
+  $("#movieYear").text(data.Year);
+  $("#movieLength").text(data.Runtime);
+  $("#movieGenre").text(data.Genre);
+  $("#movieCast").text(data.Actors);
+  $("#movieDirector").text(data.Director);
+  $("#movieProducer").text(data.Production);
+  $("#movieRating").text(data.imdbRating + "/10");
 }
 
 $("#search-form").delegate("#search-btn", "click", function(event) {
