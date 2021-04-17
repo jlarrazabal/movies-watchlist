@@ -114,7 +114,7 @@ $("#reviewBox").delegate("#save-btn", "click", function(event) {
     let rating = $('input[name="answer"]:checked').val();
     console.log(rating);
 
-    let genre= //should be from the dropdown
+    // let genre= //should be from the dropdown
     let movName = $("#movieName").val();
     let imdbID = $("#movieID").val();
 
