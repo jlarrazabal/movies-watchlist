@@ -279,3 +279,84 @@ body {
   color: var(--color1);
   background-color: var(--color3);
 }
+
+.review-btn {
+  background-color: var(--color1);
+  border: solid 1px var(--color2);
+  margin: 0.25rem;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.review-btn:hover {
+  background: var(--color3);
+  color: var(--color1);
+}
+
+.footer {
+  font-size: 1rem;
+  background-color: var(--color4);
+  width: 100%;
+  height: 4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.footer p,a {
+  color: var(--color1);
+  margin-bottom: 0;
+}
+
+.error-modal {
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color1);
+}
+
+.modal-content h3 {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color2);
+  padding: 0.5rem;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+}
+
+.modal-movie-list-item {
+  border: solid 1px var(--color2);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.25rem;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-movie-list-item:hover {
+  color: var(--color1);
+  background-color: var(--color3);
+}
