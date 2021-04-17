@@ -106,6 +106,10 @@ var dramaMovie = [];
 
 var horrorMovie = [];
 
+var fantasyMovie = [];
+
+var westernMovie = [];
+
 //function for storing information
 
 $("#reviewBox").delegate("#save-btn", "click", function(event) {
@@ -114,46 +118,64 @@ $("#reviewBox").delegate("#save-btn", "click", function(event) {
     let rating = $('input[name="answer"]:checked').val();
     console.log(rating);
 
-    // let genre= //should be from the dropdown
+    //Genre value selected from dropdown
+    // OPTION 1: let genre= $("#genres").val();
+    //OPTION 2 (PREFERRED):
+    let genre= $("#genres option:selected").text();
+    // testing if it returns the value selected in dropdown; it does
+    console.log(genre);
+
     let movName = $("#movieName").val();
     let imdbID = $("#movieID").val();
+    let reviewInfo = $("#reviewInput").text();
 
     var movieInformation = {
         movieTitle: movName,
         movieReview: reviewInfo,
         movieImdbID: imdbID,
-        // genre: genre, //should be from the dropdown
+        movieGenre: genre,
         movieRating: rating
     }
 
     switch (genre) {
-        case "action":
+        case "Action":
             actionMovie.push(movieInformation);
             //create element
             //adding movie to the menue
             //append element to the queue
+            // #accordionContainer
+            // let actionGenre = $("button").append("Action");
+            let actionGenre = $(document.createElement("button"));
+            actionGenre = innerText("Action");
+            $(actionGenre).append(genre-action);
             break;
-        case "romance":
+        case "Romance":
             romanceMovie.push(movieInformation);
             //adding movie to the menue
             break;
-        case "thriller":
+        case "Thriller":
             thrillerMovie.push(movieInformation);
             //adding movie to the menue
             break;
-        case "comedy":
+        case "Comedy":
             comedyMovie.push(movieInformation);
             break;
-        case "drama":
+        case "Drama":
             dramaMovie.push(movieInformation);
             break; 
-        case "horror":
+        case "Horror":
             horrorMovie.push(movieInformation);
-
+            break; 
+        case "Fantasy":
+            fantasyMovie.push(movieInformation);
+            break; 
+        case "Western":
+            westernMovie.push(movieInformation);
+                   
             //adding movie to the menue
     }
 
-
+    console.log(fantasyMovie);
 
     // localStorage.setItem("actionGenre", actionMovie);
     // localStorage.setItem("romanceGenre", romanceMovie);
