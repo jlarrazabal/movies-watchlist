@@ -92,42 +92,77 @@ $("#search-form").on("submit", function(event) {
 
 
 //Lemus work
-// trying the local save function
 
-//function to save information on left side
+// Movie genre arrays
+var actionMovie = [];
 
-function savedMovie() {
-    var film = localStorage.getItem("movieInfo");
+var romanceMovie = [];
 
-}
+var thrillerMovie = [];
 
-$("#save-btn").on('click', function(event){
-    var movieListItem = document.querySelector("#movieInfo").value;
+var comedyMovie = [];
+
+var dramaMovie = [];
+
+var horrorMovie = [];
+
+//function for storing information
+
+$("#reviewBox").delegate("#save-btn", "click", function(event) {
     event.preventDefault();
-    localStorage.setItem("movieInfo", movieListItem);
-    savedMovie();
-}
-  
-//     var email = document.querySelector("#email").value;
-//     var password = document.querySelector("#password").value;
-  
-//     if (email === "") {
-//       displayMessage("error", "Email cannot be blank");
-//     } else if (password === "") {
-//       displayMessage("error", "Password cannot be blank");
-//     } else {
-//       displayMessage("success", "Registered successfully");
-  
-//       localStorage.setItem("email", email);
-//       localStorage.setItem("password", password);
-//       renderLastRegistered();
-//     }
-//   });
+
+    let rating = $('input[name="answer"]:checked').val();
+    console.log(rating);
+
+    let genre= //should be from the dropdown
+    let movName = $("#movieName").val();
+    let imdbID = $("#movieID").val();
+
+    var movieInformation = {
+        movieTitle: movName,
+        movieReview: reviewInfo,
+        movieImdbID: imdbID,
+        // genre: genre, //should be from the dropdown
+        movieRating: rating
+    }
+
+    switch (genre) {
+        case "action":
+            actionMovie.push(movieInformation);
+            //create element
+            //adding movie to the menue
+            //append element to the queue
+            break;
+        case "romance":
+            romanceMovie.push(movieInformation);
+            //adding movie to the menue
+            break;
+        case "thriller":
+            thrillerMovie.push(movieInformation);
+            //adding movie to the menue
+            break;
+        case "comedy":
+            comedyMovie.push(movieInformation);
+            break;
+        case "drama":
+            dramaMovie.push(movieInformation);
+            break; 
+        case "horror":
+            horrorMovie.push(movieInformation);
+
+            //adding movie to the menue
+    }
 
 
-// $(".movieInfo").val(localStorage.movieInfo)
 
-// $("#save-btn").on('click', function(){
-//     // localStorage.movieInfo = $(".movieInfo").val()
-//     saveInfo();
-// });
+    // localStorage.setItem("actionGenre", actionMovie);
+    // localStorage.setItem("romanceGenre", romanceMovie);
+    // localStorage.setItem("thrillerGenre", thrillerMovie);
+    // localStorage.setItem("comedyGenre", comedyMovie);
+    // localStorage.setItem("dramaGenre", dramaMovie);
+    // localStorage.setItem("horrorGenre", horrorMovie);
+
+    document.getElementById("movieID").setAttribute("class", "data-id");
+    // or $("#movieID").setAttribute("class", "data-id");
+
+});
