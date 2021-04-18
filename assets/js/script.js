@@ -29,6 +29,11 @@ var getMovies = function(movie) {
         console.log(id);
         getMovieDetails(id);
       });
+      newMovie.on("click", function(event) {
+        let id = $(event.target).attr("data-imdbID");
+        console.log(id);
+        getMovieDetails(id);
+      });
       newMovieText.appendTo(newMovie);
       newMovie.appendTo("#movie-modal-content");
     }

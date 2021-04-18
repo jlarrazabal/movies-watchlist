@@ -36,6 +36,10 @@ body {
   height: 100vh;
 }
 
+main {
+    background: var(--color1);
+}
+
 .flex-header {
   display: flex;
   flex-direction: row;
@@ -120,7 +124,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap:wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
 .box {
@@ -227,7 +232,7 @@ body {
   right: 0;
   bottom: 0; */
 
-} 
+}
 
 .footer p,a {
   color: var(--color1);
@@ -293,5 +298,5 @@ body {
   color: var(--color4); */
   background-color: var(--color2);
   color: var(--color1);
-  
+
 }
