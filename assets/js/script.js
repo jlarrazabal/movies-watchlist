@@ -184,7 +184,6 @@ $("#reviewBox").delegate("#save-btn", "click", function(event) {
 
 const renderMovieFromList = function(id) {
   getMovieDetails(id);
-
 }
 
 actionMoviesInit();
