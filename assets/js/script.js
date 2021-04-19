@@ -119,10 +119,18 @@ var westernMovie = [];
 
 
 
-//function for storing information
+//functions for storing information
 
 var saveMovieListsToLocalStorage = function() {
   console.log("Save Movie Lists");
+  localStorage.setItem("actionMovies", JSON.stringify(actionMovie));
+  localStorage.setItem("comedyMovies", JSON.stringify(comedyMovie));
+  localStorage.setItem("dramaMovies", JSON.stringify(dramaMovie));
+  localStorage.setItem("fantasyMovies", JSON.stringify(fantasyMovie));
+  localStorage.setItem("horrorMovies", JSON.stringify(horrorMovie));
+  localStorage.setItem("romanceMovies", JSON.stringify(romanceMovie));
+  localStorage.setItem("thrillerMovies", JSON.stringify(thrillerMovie));
+  localStorage.setItem("westernMovies", JSON.stringify(westernMovie));
 }
 
 var updateReview = function(review) {
@@ -178,8 +186,12 @@ const renderMovieFromList = function(id) {
   getMovieDetails(id);
 
 }
-// $(".movie-list-item").on("click", function(event) {
-//   event.preventDefault();
-//   let imdbID = $(event.target).attr("data-id");
-//   renderMovieFromList(imdbID);
-// });
+
+actionMoviesInit();
+comedyMoviesInit();
+dramaMoviesInit();
+fantasyMoviesInit();
+horrorMoviesInit();
+romanceMoviesInit();
+thrillerMoviesInit();
+westernMoviesInit();
