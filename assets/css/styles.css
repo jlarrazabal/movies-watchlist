@@ -94,6 +94,11 @@ main {
   justify-content: space-between;
 }
 
+.movie-list-item span {
+  font-size: 1rem;
+  text-align: left;
+}
+
 .movie-list-item:hover {
   background-color: var(--color2);
   color: var(--color1);
