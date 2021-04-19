@@ -43,7 +43,7 @@ main {
 .flex-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 3rem;
   background-color: var(--color4);
@@ -51,11 +51,13 @@ main {
 
 .header-title {
   color: var(--color1);
+  padding-left: 1rem;
 }
 
 .header-form {
   display: flex;
   flex-direction: row;
+  padding-right: 1rem;
 }
 
 .header-form-item {
