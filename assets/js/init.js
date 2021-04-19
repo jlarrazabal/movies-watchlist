@@ -17,7 +17,7 @@ var actionMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -52,7 +52,7 @@ var comedyMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -87,7 +87,7 @@ var dramaMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -122,7 +122,7 @@ var fantasyMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -157,7 +157,7 @@ var horrorMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -192,7 +192,7 @@ var romanceMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -227,7 +227,7 @@ var thrillerMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
@@ -262,7 +262,7 @@ var westernMoviesInit = function() {
         let imdbID = $(event.target).attr("data-id");
         renderMovieFromList(imdbID);
       });
-      newMovie.delegate(newMovieText, "click", function(event) {
+      newMovieText.on("click", function(event) {
         event.preventDefault();
         let imdbID = $(event.target).parent().attr("data-id");
         renderMovieFromList(imdbID);
