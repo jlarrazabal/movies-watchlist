@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="zdBuQDTT"></script>
   <nav class="navbar flex-header" role="navigation" aria-label="main navigation">
     <h1 class="header-title">Personal Cinema Playlist</h1>
     <form id="search-form" class="header-form" action="index.html" method="post">
@@ -32,10 +34,10 @@
         </h2>
         <div id="collapseAction" class="accordion-collapse collapse show" aria-labelledby="genre-action" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 3  </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="action-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3  </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -48,10 +50,10 @@
         </h2>
         <div id="collapseComedy" class="accordion-collapse collapse" aria-labelledby="genre-comedy" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item" data-id="tt0073195"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="comedy-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -64,10 +66,10 @@
         </h2>
         <div id="collapseDrama" class="accordion-collapse collapse" aria-labelledby="genre-drama" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="drama-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -80,10 +82,10 @@
         </h2>
         <div id="collapseFantasy" class="accordion-collapse collapse" aria-labelledby="genre-fantasy" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul id="movieList">
-              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="fantasy-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -96,10 +98,10 @@
         </h2>
         <div id="collapseHorror" class="accordion-collapse collapse" aria-labelledby="genre-horror" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="horror-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -112,10 +114,10 @@
         </h2>
         <div id="collapseRomance" class="accordion-collapse collapse" aria-labelledby="genre-romance" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="romance-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -128,10 +130,10 @@
         </h2>
         <div id="collapseThriller" class="accordion-collapse collapse" aria-labelledby="genre-thriller" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item"><span>Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"><span>Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="thriller-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2 </span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3 </span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -144,10 +146,10 @@
         </h2>
         <div id="collapseWestern" class="accordion-collapse collapse" aria-labelledby="genre-western" data-bs-parent="#movie-genre-list">
           <div class="accordion-body">
-            <ul>
-              <li class="movie-list-item" data-id="tt0073195"><span>Minions  </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"data-id="tt0073195"><span>Venom  </span><button type="button" class="delete-btn button">🗑</button></li>
-              <li class="movie-list-item"data-id="tt0073195"><span>Jumanji: The Next Level </span><button type="button" class="delete-btn button">🗑</button></li>
+            <ul id="western-movies-list">
+              <!-- <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 1</span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 2</span><button type="button" class="delete-btn button">🗑</button></li>
+              <li class="movie-list-item" data-id=""><span class="movie-list-item-text">Movie Name 3</span><button type="button" class="delete-btn button">🗑</button></li> -->
             </ul>
           </div>
         </div>
@@ -177,7 +179,7 @@
         <div class="review-container" id="lemusDiv">
           <h2 class="card-content review-title" id="reviewHeader">My Review</h2>
           <form class="card-content review-form" id="reviewBox">
-            <textarea id="reviewInput" class="review-textarea" placeholder="Type your review here!" cols=100" rows="10"></textarea>
+            <textarea id="reviewInput" class="review-textarea" placeholder="Type your review here!" cols=50" rows="10"></textarea>
             <div class="card-content rating" id="starRating">
               <p><span class="content">My Rating: </span>
                 <span class="control" id="control">
@@ -221,7 +223,6 @@
             <div class="review-btn-container">
               <button id="save-btn" class="button is-large review-btn" type="button" name="button">Save</button>
               <button id="share-btn" class="button is-large review-btn" type="button" name="button">Share</button>
-              <button id="delete-btn" class="button is-large review-btn" type="button" name="button">Delete</button>
             </div>
           </form>
         </div>
@@ -263,6 +264,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="assets/js/removeMovie.js" charset="utf-8"></script>
+  <script src="assets/js/init.js" charset="utf-8"></script>
+  <script src="assets/js/addMovies.js" charset="utf-8"></script>
   <script src="assets/js/script.js" charset="utf-8"></script>
 </body>
 
