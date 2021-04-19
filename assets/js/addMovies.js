@@ -26,16 +26,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#action-movies-list");
@@ -56,16 +60,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#action-movies-list");
@@ -101,16 +109,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
-                      let imdbID = $(event.target).parent().attr("data-id");
+              event.stopPropagation();
+              let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#comedy-movies-list");
@@ -131,16 +143,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#comedy-movies-list");
@@ -176,16 +192,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
-                let imdbID = $(event.target).parent().attr("data-id");
+              event.stopPropagation();
+              let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#drama-movies-list");
@@ -206,16 +226,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-                  let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#drama-movies-list");
@@ -251,16 +275,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
-                let imdbID = $(event.target).parent().attr("data-id");
+              event.stopPropagation();
+              let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#fantasy-movies-list");
@@ -281,16 +309,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#fantasy-movies-list");
@@ -326,16 +358,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#horror-movies-list");
@@ -356,16 +392,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-                  let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#horror-movies-list");
@@ -401,16 +441,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
-                let imdbID = $(event.target).parent().attr("data-id");
+              event.stopPropagation();
+              let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#romance-movies-list");
@@ -431,16 +475,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#romance-movies-list");
@@ -476,16 +524,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
-                      let imdbID = $(event.target).parent().attr("data-id");
+              event.stopPropagation();
+              let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#thriller-movies-list");
@@ -506,16 +558,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#thriller-movies-list");
@@ -551,16 +607,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             newMovieDeleteBtn.text("🗑");
             newMovie.on("click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(newMovieText, "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
               let imdbID = $(event.target).parent().attr("data-id");
               renderMovieFromList(imdbID);
             });
             newMovie.delegate(".delete-btn", "click", function(event) {
               event.preventDefault();
+              event.stopPropagation();
+              removeMovie(event);
               $(event.target).parent().remove();
             });
             newMovie.appendTo("#western-movies-list");
@@ -581,16 +641,20 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           newMovieDeleteBtn.text("🗑");
           newMovie.on("click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
             let imdbID = $(event.target).attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(newMovieText, "click", function(event) {
             event.preventDefault();
-              let imdbID = $(event.target).parent().attr("data-id");
+            event.stopPropagation();
+            let imdbID = $(event.target).parent().attr("data-id");
             renderMovieFromList(imdbID);
           });
           newMovie.delegate(".delete-btn", "click", function(event) {
             event.preventDefault();
+            event.stopPropagation();
+            removeMovie(event);
             $(event.target).parent().remove();
           });
           newMovie.appendTo("#western-movies-list");
