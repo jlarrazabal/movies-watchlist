@@ -7,6 +7,7 @@ var actionMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", actionMovie[i].movieImdbID);
+      newMovie.attr("data-genre", actionMovie[i].genre);
       newMovieText.text(actionMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -46,6 +47,7 @@ var comedyMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", comedyMovie[i].movieImdbID);
+      newMovie.attr("data-genre", comedyMovie[i].genre);
       newMovieText.text(comedyMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -85,6 +87,7 @@ var dramaMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", dramaMovie[i].movieImdbID);
+      newMovie.attr("data-genre", dramaMovie[i].genre);
       newMovieText.text(dramaMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -124,6 +127,7 @@ var fantasyMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", fantasyMovie[i].movieImdbID);
+      newMovie.attr("data-genre", fantasyMovie[i].genre);
       newMovieText.text(fantasyMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -163,6 +167,7 @@ var horrorMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", horrorMovie[i].movieImdbID);
+      newMovie.attr("data-genre", horrorMovie[i].genre);
       newMovieText.text(horrorMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -202,6 +207,7 @@ var romanceMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", romanceMovie[i].movieImdbID);
+      newMovie.attr("data-genre", romanceMovie[i].genre);
       newMovieText.text(romanceMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -241,6 +247,7 @@ var thrillerMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", thrillerMovie[i].movieImdbID);
+      newMovie.attr("data-genre", thrillerMovie[i].genre);
       newMovieText.text(thrillerMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
@@ -280,6 +287,7 @@ var westernMoviesInit = function() {
       let newMovieDeleteBtn = $("<button>");
       newMovie.addClass("movie-list-item");
       newMovie.attr("data-id", westernMovie[i].movieImdbID);
+      newMovie.attr("data-genre", westernMovie[i].genre);
       newMovieText.text(westernMovie[i].movieTitle);
       newMovieDeleteBtn.addClass("delete-btn");
       newMovieDeleteBtn.addClass("button");
