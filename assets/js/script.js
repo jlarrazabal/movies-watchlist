@@ -20,17 +20,12 @@ var getMovies = function(movie) {
     console.log(data);
     for (var i = 0; i < data.Search.length; i++) {
       let newMovie = $("<li>");
-      let newMovieText = $("<span>")
+      let newMovieText= $("<span>")
       newMovieText.text(data.Search[i].Title)
       newMovie.attr("data-imdbID", data.Search[i].imdbID);
       newMovie.addClass("modal-movie-list-item");
       newMovie.delegate(newMovieText, "click", function(event) {
         let id = $(event.target).parent().attr("data-imdbID");
-        console.log(id);
-        getMovieDetails(id);
-      });
-      newMovie.on("click", function(event) {
-        let id = $(event.target).attr("data-imdbID");
         console.log(id);
         getMovieDetails(id);
       });
@@ -101,21 +96,15 @@ $("#search-form").on("submit", function(event) {
 // Movie genre arrays
 var actionMovie = [];
 
-var comedyMovie = [];
-
-var dramaMovie = [];
-
-var fantasyMovie = [];
-
-var horrorMovie = [];
-
 var romanceMovie = [];
 
 var thrillerMovie = [];
 
-var westernMovie = [];
+var comedyMovie = [];
 
+var dramaMovie = [];
 
+var horrorMovie = [];
 
 var fantasyMovie = [];
 
@@ -123,8 +112,11 @@ var westernMovie = [];
 
 //function for storing information
 
+$("#reviewBox").delegate("#save-btn", "click", function(event) {
+    event.preventDefault();
 
-//functions for storing information
+    let rating = $('input[name="answer"]:checked').val();
+    console.log(rating);
 
     //Genre value selected from dropdown
     // OPTION 1: let genre= $("#genres").val();
@@ -152,9 +144,9 @@ var westernMovie = [];
             //adding movie to the menue
             //append element to the queue
             // #accordionContainer
-            // let actionGenre = $("button").append("Action");
-            let actionGenre = $(document.createElement("button"));
+            // let actionGenre = $(document.createElement("button"));
             actionGenre = innerText("Action");
+            let actionGenre = $("button").append("Action");
             $(actionGenre).append(genre-action);
             break;
         case "Romance":
@@ -185,35 +177,23 @@ var westernMovie = [];
 
     console.log(fantasyMovie);
 
-  console.log(actionMovie);
-  console.log(comedyMovie);
-  console.log(dramaMovie);
-  console.log(fantasyMovie);
-  console.log(horrorMovie);
-  console.log(romanceMovie);
-  console.log(thrillerMovie);
-  console.log(westernMovie);
+    // localStorage.setItem("actionGenre", actionMovie);
+    // localStorage.setItem("romanceGenre", romanceMovie);
+    // localStorage.setItem("thrillerGenre", thrillerMovie);
+    // localStorage.setItem("comedyGenre", comedyMovie);
+    // localStorage.setItem("dramaGenre", dramaMovie);
+    // localStorage.setItem("horrorGenre", horrorMovie);
 
-  saveMovieListsToLocalStorage();
+    document.getElementById("movieID").setAttribute("class", "data-id");
+    // or $("#movieID").setAttribute("class", "data-id");
 
-}
-
-$("#reviewBox").delegate("#save-btn", "click", function(event) {
-  event.preventDefault();
-  addMovieToList();
 });
-
-
 const renderMovieFromList = function(id) {
-  getMovieDetails(id);
+	getMovieDetails(id);
 
 }
-
-actionMoviesInit();
-comedyMoviesInit();
-dramaMoviesInit();
-fantasyMoviesInit();
-horrorMoviesInit();
-romanceMoviesInit();
-thrillerMoviesInit();
-westernMoviesInit();
+$(".movie-list-item").on("click",function (event){
+	event.preventDefault();
+	let imdbID = $(event.target).attr("data-id");
+	renderMovieFromList(imdbID);
+});
