@@ -28,11 +28,15 @@ var getMovies = function(movie) {
         let id = $(event.target).parent().attr("data-imdbID");
         console.log(id);
         getMovieDetails(id);
+        $("#movies-modal").dialog("close");
+        $("#movie-modal-content").empty();
       });
       newMovie.on("click", function(event) {
         let id = $(event.target).attr("data-imdbID");
         console.log(id);
         getMovieDetails(id);
+        $("#movies-modal").dialog("close");
+        $("#movie-modal-content").empty();
       });
       newMovieText.appendTo(newMovie);
       newMovie.appendTo("#movie-modal-content");
@@ -43,6 +47,9 @@ var getMovies = function(movie) {
   });
   console.log(searchedMovie);
   url = "";
+  $("#reviewInput").val("");
+  $("#rating").val("");
+  $("#genres").val("");
 }
 
 var getMovieDetails = function(id) {
@@ -60,14 +67,14 @@ var getMovieDetails = function(id) {
     }
   }).then(function(data) {
     console.log(data);
-    renderMovieInfor(data);
+    renderMovieInfo(data);
   });
-  $("#movies-modal").dialog("close");
-  $("#movie-modal-content").empty();
+  // $("#movies-modal").dialog("close");
+  // $("#movie-modal-content").empty();
   url = "";
 }
 
-var renderMovieInfor = function(data) {
+var renderMovieInfo = function(data) {
   $("#movieName").text(data.Title);
   $("#movie-details-poster").attr("src", data.Poster);
   $("#movieYear").text(data.Year);
@@ -119,6 +126,7 @@ var westernMovie = [];
 
 
 
+
 //functions for storing information
 
 var saveMovieListsToLocalStorage = function() {
@@ -139,7 +147,7 @@ var updateReview = function(review) {
 
 var addMovieToList = function() {
 
-  let rating = $('input[name="answer"]:checked').val();
+  let rating = $("#rating").val();
   let genre = $("#genres").val().toLowerCase();
   let movName = $("#movieName").text().toUpperCase();
   let imdbID = $("#movieID").text();
@@ -182,8 +190,10 @@ $("#reviewBox").delegate("#save-btn", "click", function(event) {
 });
 
 
-const renderMovieFromList = function(id) {
+var renderMovieFromList = function(event) {
+  let id = $(event).attr("data-id");
   getMovieDetails(id);
+  renderReview(event);
 }
 
 actionMoviesInit();
