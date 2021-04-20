@@ -197,12 +197,16 @@ main {
   border: solid 1px var(--color2);
   border-radius: 0.5rem;
   padding: 0.5rem;
+  display: inline-block;
+  width: 400px;
+  height: 200px;
 }
 
-.rating {
+.dropdown-selectors {
   height: 2rem;
   display: flex;
   align-items: center;
+  padding-left: 0;
 }
 
 .review-btn-container{
@@ -291,15 +295,17 @@ main {
   color: var(--color1);
   background-color: var(--color3);
 }
-.genre-option {
+
+.option {
   background-color: var(--color1);
   border: solid 1px var(--color2);
   margin: 0.25rem;
   font-weight: 400;
-  flex-grow: 1;
   border-radius: 0.5rem;
+  display: inline-block;
+  width: 50%;
 }
-.genre-option:hover {
+.option:hover {
   border: solid 1px var(--color2);
   /* background: var(--color1);
   color: var(--color4); */

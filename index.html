@@ -179,50 +179,36 @@
         <div class="review-container" id="lemusDiv">
           <h2 class="card-content review-title" id="reviewHeader">My Review</h2>
           <form class="card-content review-form" id="reviewBox">
-            <textarea id="reviewInput" class="review-textarea" placeholder="Type your review here!" cols="50" rows="10"></textarea>
-            <div class="card-content rating" id="starRating">
-              <p><span class="content">My Rating: </span>
-                <span class="control" id="control">
-                  <label class="radio">
-                    <input type="radio" name="answer" value="1">
-                    1
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer" value="2">
-                    2
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer" value="3">
-                    3
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer" value="4">
-                    4
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="answer" value="5">
-                    5
-                  </label>
-                </span>
-              </p>
+            <textarea id="reviewInput" class="review-textarea" placeholder="Type your review here!"></textarea>
+            <div class="card-content dropdown-selectors" id="starRating">
+              <label for="genres">Choose a genre:</label>
+              <select name="rating" id="rating" class="option">
+                <option value="">Select Rating</option>
+                <option value="⭐">⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+              </select>
             </div>
-
-            <label for="genres">Choose a genre:</label>
-
-            <select name="genres" id="genres" class="genre-option">
-              <option value="action">Action</option>
-              <option value="comedy">Comedy</option>
-              <option value="drama">Drama</option>
-              <option value="fantasy">Fantasy</option>
-              <option value="horror">Horror</option>
-              <option value="romance">Romance</option>
-              <option value="thriller">Thriller</option>
-              <option value="western">Western</option>
-            </select>
+            <div class="card-content dropdown-selectors">
+              <label for="genres">Choose a genre:</label>
+              <select name="genres" id="genres" class="option">
+                <option value="">Select Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value="thriller">Thriller</option>
+                <option value="western">Western</option>
+              </select>
+            </div>
 
             <div class="review-btn-container">
               <button id="save-btn" class="button is-large review-btn" type="button" name="button">Save</button>
-              <button id="share-btn" class="button is-large review-btn" type="button" name="button">Share</button>
+              <button id="update-btn" class="button is-large review-btn" type="button" name="button">Update</button>
             </div>
           </form>
         </div>
@@ -267,6 +253,7 @@
   <script src="assets/js/removeMovie.js" charset="utf-8"></script>
   <script src="assets/js/init.js" charset="utf-8"></script>
   <script src="assets/js/addMovies.js" charset="utf-8"></script>
+  <script src="assets/js/renderReview.js" charset="utf-8"></script>
   <script src="assets/js/script.js" charset="utf-8"></script>
 </body>
 
