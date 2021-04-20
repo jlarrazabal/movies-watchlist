@@ -19,6 +19,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -53,6 +54,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -102,6 +104,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -136,6 +139,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -185,6 +189,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -219,6 +224,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -268,6 +274,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -302,6 +309,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -351,6 +359,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -385,6 +394,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -434,6 +444,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -468,6 +479,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -517,6 +529,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -551,6 +564,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");
@@ -600,6 +614,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
             let newMovieDeleteBtn = $("<button>");
             newMovie.addClass("movie-list-item");
             newMovie.attr("data-id", imdbID);
+            newMovie.attr("data-genre", genre);
             newMovieText.text(movName);
             newMovieDeleteBtn.addClass("delete-btn");
             newMovieDeleteBtn.addClass("button");
@@ -634,6 +649,7 @@ var addMovies = function(genre, movName, imdbID, movieInformation) {
           let newMovieDeleteBtn = $("<button>");
           newMovie.addClass("movie-list-item");
           newMovie.attr("data-id", imdbID);
+          newMovie.attr("data-genre", genre);
           newMovieText.text(movName);
           newMovieDeleteBtn.addClass("delete-btn");
           newMovieDeleteBtn.addClass("button");

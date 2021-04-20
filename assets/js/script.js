@@ -20,12 +20,17 @@ var getMovies = function(movie) {
     console.log(data);
     for (var i = 0; i < data.Search.length; i++) {
       let newMovie = $("<li>");
-      let newMovieText= $("<span>")
+      let newMovieText = $("<span>")
       newMovieText.text(data.Search[i].Title)
       newMovie.attr("data-imdbID", data.Search[i].imdbID);
       newMovie.addClass("modal-movie-list-item");
       newMovie.delegate(newMovieText, "click", function(event) {
         let id = $(event.target).parent().attr("data-imdbID");
+        console.log(id);
+        getMovieDetails(id);
+      });
+      newMovie.on("click", function(event) {
+        let id = $(event.target).attr("data-imdbID");
         console.log(id);
         getMovieDetails(id);
       });
@@ -96,104 +101,96 @@ $("#search-form").on("submit", function(event) {
 // Movie genre arrays
 var actionMovie = [];
 
-var romanceMovie = [];
-
-var thrillerMovie = [];
-
 var comedyMovie = [];
 
 var dramaMovie = [];
 
+var fantasyMovie = [];
+
 var horrorMovie = [];
 
-var fantasyMovie = [];
+var romanceMovie = [];
+
+var thrillerMovie = [];
 
 var westernMovie = [];
 
-//function for storing information
 
-$("#reviewBox").delegate("#save-btn", "click", function(event) {
-    event.preventDefault();
 
-    let rating = $('input[name="answer"]:checked').val();
-    console.log(rating);
 
-    //Genre value selected from dropdown
-    // OPTION 1: let genre= $("#genres").val();
-    //OPTION 2 (PREFERRED):
-    let genre= $("#genres option:selected").text();
-    // testing if it returns the value selected in dropdown; it does
-    console.log(genre);
 
-    let movName = $("#movieName").val();
-    let imdbID = $("#movieID").val();
-    let reviewInfo = $("#reviewInput").text();
+//functions for storing information
 
-    var movieInformation = {
-        movieTitle: movName,
-        movieReview: reviewInfo,
-        movieImdbID: imdbID,
-        movieGenre: genre,
-        movieRating: rating
-    }
+var saveMovieListsToLocalStorage = function() {
+  console.log("Save Movie Lists");
+  localStorage.setItem("actionMovies", JSON.stringify(actionMovie));
+  localStorage.setItem("comedyMovies", JSON.stringify(comedyMovie));
+  localStorage.setItem("dramaMovies", JSON.stringify(dramaMovie));
+  localStorage.setItem("fantasyMovies", JSON.stringify(fantasyMovie));
+  localStorage.setItem("horrorMovies", JSON.stringify(horrorMovie));
+  localStorage.setItem("romanceMovies", JSON.stringify(romanceMovie));
+  localStorage.setItem("thrillerMovies", JSON.stringify(thrillerMovie));
+  localStorage.setItem("westernMovies", JSON.stringify(westernMovie));
+}
 
-    switch (genre) {
-        case "Action":
-            actionMovie.push(movieInformation);
-            //create element
-            //adding movie to the menue
-            //append element to the queue
-            // #accordionContainer
-            // let actionGenre = $(document.createElement("button"));
-            actionGenre = innerText("Action");
-            let actionGenre = $("button").append("Action");
-            $(actionGenre).append(genre-action);
-            break;
-        case "Romance":
-            romanceMovie.push(movieInformation);
-            //adding movie to the menue
-            break;
-        case "Thriller":
-            thrillerMovie.push(movieInformation);
-            //adding movie to the menue
-            break;
-        case "Comedy":
-            comedyMovie.push(movieInformation);
-            break;
-        case "Drama":
-            dramaMovie.push(movieInformation);
-            break; 
-        case "Horror":
-            horrorMovie.push(movieInformation);
-            break; 
-        case "Fantasy":
-            fantasyMovie.push(movieInformation);
-            break; 
-        case "Western":
-            westernMovie.push(movieInformation);
-                   
-            //adding movie to the menue
-    }
+var updateReview = function(review) {
+  console.log(review);
+}
 
-    console.log(fantasyMovie);
+var addMovieToList = function() {
 
-    // localStorage.setItem("actionGenre", actionMovie);
-    // localStorage.setItem("romanceGenre", romanceMovie);
-    // localStorage.setItem("thrillerGenre", thrillerMovie);
-    // localStorage.setItem("comedyGenre", comedyMovie);
-    // localStorage.setItem("dramaGenre", dramaMovie);
-    // localStorage.setItem("horrorGenre", horrorMovie);
+  let rating = $('input[name="answer"]:checked').val();
+  let genre = $("#genres").val().toLowerCase();
+  let movName = $("#movieName").text().toUpperCase();
+  let imdbID = $("#movieID").text();
+  let reviewInfo = $("#reviewInput").val();
 
-    document.getElementById("movieID").setAttribute("class", "data-id");
-    // or $("#movieID").setAttribute("class", "data-id");
+  console.log(rating);
+  console.log(genre);
+  console.log(movName);
+  console.log(imdbID);
+  console.log(reviewInfo);
 
-});
-const renderMovieFromList = function(id) {
-	getMovieDetails(id);
+  var movieInformation = {
+    movieTitle: movName,
+    movieReview: reviewInfo,
+    movieImdbID: imdbID,
+    genre: genre,
+    movieRating: rating
+  }
+
+  console.log(movieInformation);
+
+  addMovies(genre, movName, imdbID, movieInformation);
+
+  console.log(actionMovie);
+  console.log(comedyMovie);
+  console.log(dramaMovie);
+  console.log(fantasyMovie);
+  console.log(horrorMovie);
+  console.log(romanceMovie);
+  console.log(thrillerMovie);
+  console.log(westernMovie);
+
+  saveMovieListsToLocalStorage();
 
 }
-$(".movie-list-item").on("click",function (event){
-	event.preventDefault();
-	let imdbID = $(event.target).attr("data-id");
-	renderMovieFromList(imdbID);
+
+$("#reviewBox").delegate("#save-btn", "click", function(event) {
+  event.preventDefault();
+  addMovieToList();
 });
+
+
+const renderMovieFromList = function(id) {
+  getMovieDetails(id);
+}
+
+actionMoviesInit();
+comedyMoviesInit();
+dramaMoviesInit();
+fantasyMoviesInit();
+horrorMoviesInit();
+romanceMoviesInit();
+thrillerMoviesInit();
+westernMoviesInit();
