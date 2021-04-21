@@ -19,7 +19,7 @@
     <form id="search-form" class="header-form" action="index.html" method="post">
       <input id="movie-search" class="input header-form-item" type="text" name="search" value="" placeholder="Type movie name!">
       <button id="search-btn" class="button header-form-item header-btn" type="button" name="button">🔍</button>
-      <button id="quote-btn" class="button header-form-item header-btn quote-btn-mobile" type="button" name="button">Random Quote</button>
+      <button id="quote-btn" class="button header-form-item header-btn quote-btn-mobile" type="button" name="button">Funny Quote</button>
     </form>
   </nav>
   <main class="movieDisplay">
@@ -246,14 +246,20 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <div id="quote-modal" class="modal quoteModal">
+  <div id="quote-modal" class="modal">
     <div class="modal-background "></div>
-    <div class="modal-content">
+    <div class="modal-content quoteModal">
       <h3 id="quoteLine"></h3>
       <p>Anime: <span id="anime"></span></p>
       <p>Character: <span id="character"></span></p>
-      <button id="modal-close-btn" class="button is-fullwidth is-danger is-outlined" id="close-btn">Close</button>
+      <button id="modal-close-btn" class="button is-fullwidth is-danger is-outlined">Close</button>
     </div>
+  </div>
+
+  <div id="missing-information" class="error-modal">
+    <h3>Missing required fields</h3>
+    <p>To save or update a movie, please select a movie from your queue or use the search bar in the header to look for a new movie. The genre field in the review form cannot be empty. Providing a review and rating is optional; the review and rating can be updated at any time in the future.</p>
+    <button id="mi-modal-close" class="button is-fullwidth is-danger is-outlined" type="button" name="button">Close</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
