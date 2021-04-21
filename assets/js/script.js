@@ -53,6 +53,7 @@ var getMovies = function(movie) {
 }
 
 var getMovieDetails = function(id) {
+  $("#genres").attr("disabled", false);
   console.log(id);
   let iUrl = "https://www.omdbapi.com/?apikey=" + omdbKey + "&i=" + id;
   console.log(iUrl);
@@ -131,6 +132,7 @@ var westernMovie = [];
 
 var saveMovieListsToLocalStorage = function() {
   console.log("Save Movie Lists");
+  $("#genres").attr("disabled", true);
   localStorage.setItem("actionMovies", JSON.stringify(actionMovie));
   localStorage.setItem("comedyMovies", JSON.stringify(comedyMovie));
   localStorage.setItem("dramaMovies", JSON.stringify(dramaMovie));
@@ -184,17 +186,59 @@ var addMovieToList = function() {
 
 }
 
+var getQuote = function() {
+    let quoteAPI = "https://animechan.vercel.app/api/random";
+    fetch(quoteAPI).then(function(response) {
+      if (!response.ok) {
+        $(function() {
+          $("#error").dialog();
+        });
+        console.log(response);
+      } else {
+        return response.json();
+      }
+    }).then(function(data) {
+      console.log(data);
+      $(function() {
+        $("#quote-modal").dialog();
+      });
+      let quoteText = $("#quoteLine");
+      quoteText.text(data.quote);
+      let quoteAnime = $("#anime");
+      quoteAnime.text(data.anime);
+      let quoteCharacter = $("#character");
+      quoteCharacter.text(data.character);
+    });
+    quoteAPI = "";
+}
+var closeQuote = function () {
+  $("#quote-modal").dialog("close");
+}
+
 $("#reviewBox").delegate("#save-btn", "click", function(event) {
   event.preventDefault();
   addMovieToList();
 });
 
+$("#reviewBox").delegate("#update-btn", "click", function(event) {
+  event.preventDefault();
+  updateMovieReview();
+});
 
 var renderMovieFromList = function(event) {
   let id = $(event).attr("data-id");
   getMovieDetails(id);
   renderReview(event);
 }
+
+$("#quote-btn").on("click", function(event){
+  event.preventDefault();
+  getQuote();
+});
+$("#modal-close-btn").on("click", function(event){
+  event.preventDefault();
+  closeQuote();
+});
 
 actionMoviesInit();
 comedyMoviesInit();

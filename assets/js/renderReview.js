@@ -3,6 +3,7 @@ var renderReview = function(event) {
   let genre = $(event).attr("data-genre");
   console.log(movieID);
   console.log(genre);
+  $("#genres").attr("disabled", true);
 
   switch(true) {
     case genre === "action":

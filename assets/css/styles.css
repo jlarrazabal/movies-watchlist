@@ -7,8 +7,7 @@
 }
 
 /* General Selectors */
-
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -37,7 +36,8 @@ body {
 }
 
 main {
-    background: var(--color1);
+  background: var(--color1);
+  height: 100vh;
 }
 
 .flex-header {
@@ -57,6 +57,7 @@ main {
 .header-form {
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   padding-right: 1rem;
 }
 
@@ -68,11 +69,11 @@ main {
 
 .header-btn:hover {
   background-color: var(--color2);
+  color: var(--color1);
 }
 
 .movie-list-container {
   width: 20%;
-  /* height: 100vh; */
   margin-left: 1rem;
 }
 
@@ -130,16 +131,18 @@ main {
 .movieInfo {
   display: flex;
   flex-direction: column;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  height: 100vh;
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .box {
   border: none;
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: var(--color1);
   padding: 0;
@@ -154,18 +157,25 @@ main {
   padding: 0.25rem;
   padding-top: 1rem;
   color: var(--color2);
-  width: 100%;
   text-align: center;
   font-weight: 400;
 }
 
 .movie-details-container {
-  display:inline-block;
+  display: inline-block;
   border: solid 1px var(--color2);
   background-color: var(--color1);
   padding: 0.5rem;
   border-radius: 0.5rem;
   flex-grow: 1;
+  max-width: 30%;
+}
+
+.movie-poster {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .review-container {
@@ -174,6 +184,8 @@ main {
   border-radius: 0.5rem;
   margin-left: 0.5rem;
   flex-grow: 1;
+  text-align: center;
+  width: 60%;
 }
 
 .review-title {
@@ -186,9 +198,12 @@ main {
 }
 
 .review-form {
-  display: inline-block;
+  display: flex;
   padding: 0 0.5rem;
   border: 0;
+  flex-grow: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .review-textarea {
@@ -198,8 +213,9 @@ main {
   border-radius: 0.5rem;
   padding: 0.5rem;
   display: inline-block;
-  width: 400px;
+  width: 100%;
   height: 200px;
+  flex-grow: 1;
 }
 
 .dropdown-selectors {
@@ -209,7 +225,7 @@ main {
   padding-left: 0;
 }
 
-.review-btn-container{
+.review-btn-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -218,7 +234,7 @@ main {
 .review-btn {
   background-color: var(--color1);
   border: solid 1px var(--color2);
-  margin: 0.25rem;
+  margin: 1rem;
   font-weight: 400;
   flex-grow: 1;
 }
@@ -228,7 +244,7 @@ main {
   color: var(--color1);
 }
 
- .footer {
+.footer {
   font-size: 1rem;
   background-color: var(--color4);
   width: 100%;
@@ -238,14 +254,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* position:fixed;
-  left: 0;
-  right: 0;
-  bottom: 0; */
-
 }
 
-.footer p,a {
+.footer p, a {
   color: var(--color1);
   margin-bottom: 0;
 }
@@ -303,13 +314,105 @@ main {
   font-weight: 400;
   border-radius: 0.5rem;
   display: inline-block;
-  width: 50%;
+  width: 20%;
 }
+
 .option:hover {
   border: solid 1px var(--color2);
-  /* background: var(--color1);
-  color: var(--color4); */
   background-color: var(--color2);
   color: var(--color1);
+}
 
+@media only screen and (max-width: 1024px) {
+  .flex-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    padding-left: 0;
+  }
+
+  .header-form {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  main {
+    height: auto;
+  }
+
+  .movieDisplay {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .displayTitle {
+    display: block;
+  }
+
+  .movieInfo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .header-title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .quote-btn-mobile{
+    display: block;
+  }
+
+  .movie-list-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .review-container {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .movie-details-container {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .option {
+    width: 50%;
+  }
+
+  .movie-details-container p span {
+    font-size: 1rem;
+  }
+
+  .footer{
+    justify-content: center;
+    align-items: center;
+  }
+  .footer p,a,span {
+    text-align: center;
+    font-size: x-small;
+  }
 }
