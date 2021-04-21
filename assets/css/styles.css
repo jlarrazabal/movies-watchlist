@@ -265,6 +265,10 @@ main {
   display: none;
 }
 
+.error-modal h3 {
+  text-align: center;
+}
+
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -305,6 +309,24 @@ main {
 .modal-movie-list-item:hover {
   color: var(--color1);
   background-color: var(--color3);
+}
+
+.quoteModal{
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.quoteModal h3 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.quoteModal p {
+  padding-bottom: 0.5rem;
+  margin: 0;
 }
 
 .option {

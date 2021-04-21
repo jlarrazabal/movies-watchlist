@@ -155,35 +155,40 @@ var addMovieToList = function() {
   let imdbID = $("#movieID").text();
   let reviewInfo = $("#reviewInput").val();
 
-  console.log(rating);
-  console.log(genre);
-  console.log(movName);
-  console.log(imdbID);
-  console.log(reviewInfo);
+  if(genre === "" || imdbID === "") {
+    $(function() {
+      $("#missing-information").dialog();
+    });
+  } else {
+    console.log(rating);
+    console.log(genre);
+    console.log(movName);
+    console.log(imdbID);
+    console.log(reviewInfo);
 
-  var movieInformation = {
-    movieTitle: movName,
-    movieReview: reviewInfo,
-    movieImdbID: imdbID,
-    genre: genre,
-    movieRating: rating
+    var movieInformation = {
+      movieTitle: movName,
+      movieReview: reviewInfo,
+      movieImdbID: imdbID,
+      genre: genre,
+      movieRating: rating
+    }
+
+    console.log(movieInformation);
+
+    addMovies(genre, movName, imdbID, movieInformation);
+
+    console.log(actionMovie);
+    console.log(comedyMovie);
+    console.log(dramaMovie);
+    console.log(fantasyMovie);
+    console.log(horrorMovie);
+    console.log(romanceMovie);
+    console.log(thrillerMovie);
+    console.log(westernMovie);
+
+    saveMovieListsToLocalStorage();
   }
-
-  console.log(movieInformation);
-
-  addMovies(genre, movName, imdbID, movieInformation);
-
-  console.log(actionMovie);
-  console.log(comedyMovie);
-  console.log(dramaMovie);
-  console.log(fantasyMovie);
-  console.log(horrorMovie);
-  console.log(romanceMovie);
-  console.log(thrillerMovie);
-  console.log(westernMovie);
-
-  saveMovieListsToLocalStorage();
-
 }
 
 var getQuote = function() {
@@ -238,6 +243,11 @@ $("#quote-btn").on("click", function(event){
 $("#modal-close-btn").on("click", function(event){
   event.preventDefault();
   closeQuote();
+});
+
+$("#mi-modal-close").on("click", function(event){
+  event.preventDefault();
+  $("#missing-information").dialog("close");
 });
 
 actionMoviesInit();
