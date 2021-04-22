@@ -230,6 +230,11 @@ $("#reviewBox").delegate("#update-btn", "click", function(event) {
   updateMovieReview();
 });
 
+$("#reviewBox").delegate("#share-btn", "click", function(event) {
+  event.preventDefault();
+  shareReview();
+});
+
 var renderMovieFromList = function(event) {
   let id = $(event).attr("data-id");
   getMovieDetails(id);
@@ -248,6 +253,11 @@ $("#modal-close-btn").on("click", function(event){
 $("#mi-modal-close").on("click", function(event){
   event.preventDefault();
   $("#missing-information").dialog("close");
+});
+
+$("#cs-modal-close").on("click", function(event){
+  event.preventDefault();
+  $("#cannot-share").dialog("close");
 });
 
 actionMoviesInit();
