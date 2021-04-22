@@ -208,6 +208,7 @@
             <div class="review-btn-container">
               <button id="save-btn" class="button is-large review-btn" type="button" name="button">Save</button>
               <button id="update-btn" class="button is-large review-btn" type="button" name="button">Update</button>
+              <button id="share-btn" class="button is-large review-btn" type="button" name="button">Share</button>
             </div>
           </form>
         </div>
@@ -262,9 +263,16 @@
     <button id="mi-modal-close" class="button is-fullwidth is-danger is-outlined" type="button" name="button">Close</button>
   </div>
 
+  <div id="cannot-share" class="error-modal">
+    <h3>Not possible to Share</h3>
+    <p>To share your review on Facebook, please open a movie from your list, or search for a movie using the search bar in the header. A review is required to post the review to Facebook</p>
+    <button id="cs-modal-close" class="button is-fullwidth is-danger is-outlined" type="button" name="button">Close</button>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="assets/js/shareReview.js" charset="utf-8"></script>
   <script src="assets/js/updateMovie.js" charset="utf-8"></script>
   <script src="assets/js/removeMovie.js" charset="utf-8"></script>
   <script src="assets/js/init.js" charset="utf-8"></script>
