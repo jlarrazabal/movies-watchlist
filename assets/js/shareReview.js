@@ -4,7 +4,7 @@ var shareReview = function() {
   let reviewString = JSON.stringify(review);
   let url = "https://www.facebook.com/sharer/sharer.php?u="+imgSrc+"&quote="+reviewString;
 
-  if(imgSrc === "" || review === "") {
+  if(imgSrc === "https://bulma.io/images/placeholders/1280x960.png" || review === "") {
     $(function() {
       $("#cannot-share").dialog();
     });
