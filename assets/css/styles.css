@@ -451,4 +451,8 @@ main {
     text-align: center;
     font-size: x-small;
   }
+
+  .modal-content {
+    margin: 0;
+  }
 }
