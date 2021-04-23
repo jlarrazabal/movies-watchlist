@@ -1,6 +1,7 @@
 # movies-watchlist
 
-1. Summary: Movie-Watchlist (Personal Cinema Playlist) is a web application that lets the users search for movies, add them to their queue, provide reviews and ratings, and share their reviews on Facebook.
+1. Summary:
+    * Movie-Watchlist (Personal Cinema Playlist) is a web application that lets the users search for movies, add them to their queue, provide reviews and ratings, and share their reviews on Facebook.
 
 2. Features:
     * Search Movies:
