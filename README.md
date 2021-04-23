@@ -3,7 +3,9 @@
 1. Summary:
     * Movie-Watchlist (Personal Cinema Playlist) is a web application that lets the users search for movies, add them to their queue, provide reviews and ratings, and share their reviews on Facebook.
 
-2. Features:
+2. Link: https://jlarrazabal.github.io/movies-watchlist/
+
+3. Features:
     * Search Movies:
         - The user can search for a movie simply by Providing words in the name of the movie.
         - The app will search the http://www.omdbapi.com/ database through their search API and return the movie names that match the search criteria.
@@ -25,6 +27,8 @@
       * Responsive Site:
         - The page was built to be rendered on any mobile device.
 
-3. Image:
+4. Image:
 
 ![](assets/images/movie-watchlist.png)
+
+5. Video: https://drive.google.com/file/d/1E5_zldXUHvB1HfStVDZsuNHZSzfLEiTb/view
