@@ -24,6 +24,10 @@
                 - To change the genre, the user will have to delete the movie from their queue by clicking on the delete button on the right side of the movie name. Search and save the film again.
         - Share Review:
             - The user can share the poster of the movie and their review to Facebook by clicking on the share button.
+
+      * Funny Quote:
+        - The user can get a random anime quote by clicking on the Funny Quote button.
+
       * Responsive Site:
         - The page was built to be rendered on any mobile device.
 
