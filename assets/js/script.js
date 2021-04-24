@@ -1,12 +1,23 @@
 //Global Variables
 const omdbKey = "5d0b46f6";
 var movieName = "";
+var actionMovie = [];
+var comedyMovie = [];
+var dramaMovie = [];
+var fantasyMovie = [];
+var horrorMovie = [];
+var romanceMovie = [];
+var thrillerMovie = [];
+var westernMovie = [];
 
-
+//Function that looks for possible movies matching the users search criteria on OMDB through their search API.
 var getMovies = function(movie) {
   let searchedMovie = movie.replace(/\s/g, "+");
   let sUrl = "https://www.omdbapi.com/?apikey=" + omdbKey + "&s=" + searchedMovie;
   console.log(sUrl);
+  if($("#movie-modal-content").children() !== null) {
+    $("#movie-modal-content").empty();
+  }
   fetch(sUrl).then(function(response) {
     if (!response.ok) {
       $(function() {
@@ -52,6 +63,7 @@ var getMovies = function(movie) {
   $("#genres").val("");
 }
 
+//Function that gets the details of the movie selected by the user from the list created by the getMovies function using the movie IMDB ID as the search value.
 var getMovieDetails = function(id) {
   $("#genres").attr("disabled", false);
   console.log(id);
@@ -70,11 +82,10 @@ var getMovieDetails = function(id) {
     console.log(data);
     renderMovieInfo(data);
   });
-  // $("#movies-modal").dialog("close");
-  // $("#movie-modal-content").empty();
   url = "";
 }
 
+//Function that renders the movie details of the movie obtained from the getMovieDetails function.
 var renderMovieInfo = function(data) {
   $("#movieName").text(data.Title);
   $("#movie-details-poster").attr("src", data.Poster);
@@ -88,48 +99,7 @@ var renderMovieInfo = function(data) {
   $("#movieID").text(data.imdbID);
 }
 
-$("#search-form").delegate("#search-btn", "click", function(event) {
-  event.preventDefault()
-  let movie = $("#movie-search").val();
-  getMovies(movie);
-  $("#movie-search").val("");
-});
-
-$("#search-form").on("submit", function(event) {
-  event.preventDefault()
-  let movie = $("#movie-search").val();
-  getMovies(movie);
-  $("#movie-search").val("");
-});
-
-
-
-//Lemus work
-
-// Movie genre arrays
-var actionMovie = [];
-
-var comedyMovie = [];
-
-var dramaMovie = [];
-
-var fantasyMovie = [];
-
-var horrorMovie = [];
-
-var romanceMovie = [];
-
-var thrillerMovie = [];
-
-var westernMovie = [];
-
-
-
-
-
-
-//functions for storing information
-
+//Fuction that saves the movies arrays of objects to local storage.
 var saveMovieListsToLocalStorage = function() {
   console.log("Save Movie Lists");
   $("#genres").attr("disabled", true);
@@ -143,10 +113,7 @@ var saveMovieListsToLocalStorage = function() {
   localStorage.setItem("westernMovies", JSON.stringify(westernMovie));
 }
 
-var updateReview = function(review) {
-  console.log(review);
-}
-
+//Function that adds the rendered in the page to the My Queue section when the user clicks the save button.
 var addMovieToList = function() {
 
   let rating = $("#rating").val();
@@ -191,6 +158,7 @@ var addMovieToList = function() {
   }
 }
 
+//Function that gets a ramdom quote from an anyme and renders a modal with the results.
 var getQuote = function() {
     let quoteAPI = "https://animechan.vercel.app/api/random";
     fetch(quoteAPI).then(function(response) {
@@ -216,50 +184,78 @@ var getQuote = function() {
     });
     quoteAPI = "";
 }
+
+//Function that closess the quote modal.
 var closeQuote = function () {
   $("#quote-modal").dialog("close");
 }
 
-$("#reviewBox").delegate("#save-btn", "click", function(event) {
-  event.preventDefault();
-  addMovieToList();
-});
-
-$("#reviewBox").delegate("#update-btn", "click", function(event) {
-  event.preventDefault();
-  updateMovieReview();
-});
-
-$("#reviewBox").delegate("#share-btn", "click", function(event) {
-  event.preventDefault();
-  shareReview();
-});
-
+//Function that renders a movie saved in the My Queue section.
 var renderMovieFromList = function(event) {
   let id = $(event).attr("data-id");
   getMovieDetails(id);
   renderReview(event);
 }
 
+//Event listener that trigers the movie search when clicking on the seatch button.
+$("#search-form").delegate("#search-btn", "click", function(event) {
+  event.preventDefault()
+  let movie = $("#movie-search").val();
+  getMovies(movie);
+  $("#movie-search").val("");
+});
+
+//Event listener that trigers the movie search when the user clicks enter instead of clicking the seacrh button.
+$("#search-form").on("submit", function(event) {
+  event.preventDefault()
+  let movie = $("#movie-search").val();
+  getMovies(movie);
+  $("#movie-search").val("");
+});
+
+//Event listener that triggers the save of a movie into the My Queue section.
+$("#reviewBox").delegate("#save-btn", "click", function(event) {
+  event.preventDefault();
+  addMovieToList();
+});
+
+//Event listener that trigers the update review option to change the content of the review and the rating of a saved movie.
+$("#reviewBox").delegate("#update-btn", "click", function(event) {
+  event.preventDefault();
+  updateMovieReview();
+});
+
+//Event listener that triggers the share of the movie poster and review on Facebook.
+$("#reviewBox").delegate("#share-btn", "click", function(event) {
+  event.preventDefault();
+  shareReview();
+});
+
+//Event listener that trigers the getQuote fuction.
 $("#quote-btn").on("click", function(event){
   event.preventDefault();
   getQuote();
 });
+
+//Event listener that trigers the close of the quote modal.
 $("#modal-close-btn").on("click", function(event){
   event.preventDefault();
   closeQuote();
 });
 
+//Event listener that closess the missing information modal.
 $("#mi-modal-close").on("click", function(event){
   event.preventDefault();
   $("#missing-information").dialog("close");
 });
 
+//Event listener that closess the cannot share modal.
 $("#cs-modal-close").on("click", function(event){
   event.preventDefault();
   $("#cannot-share").dialog("close");
 });
 
+//Runs the functions that verify if there is information saved on local storage, and renders the information in the My Queue menue as required.
 actionMoviesInit();
 comedyMoviesInit();
 dramaMoviesInit();
